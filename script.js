@@ -1,11 +1,13 @@
 const header = document.getElementsByClassName("header")[0];
 const container = document.getElementsByClassName("container")[0];
+let topEl = document.querySelector(".backToTop");
+
 header.addEventListener("mouseover", () => {
     container.style.opacity = 0.4;
-    container.style.backgroundColor = "rgba(255,255,255, 0.1)";
+    // container.style.backgroundColor = "rgba(255,255,255, 0.1)";
 })
 header.addEventListener("mouseout", () => {
-    container.style.backgroundColor = "var(--main-bg-color)";
+    // container.style.backgroundColor = "var(--main-bg-color)";
     container.style.opacity = 1;
 })
 
@@ -45,13 +47,18 @@ function showSlides(n) {
 
 
 document.addEventListener("scroll", () => {
-
-    console.log(window.scrollY)
     let scroll = window.scrollY;
-    let topEl = document.querySelector(".backToTop");
     if (scroll > 500) {
         topEl.classList.remove("d-n")
     } else {
         topEl.classList.add("d-n")
     }
+})
+
+document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("fa-arrow-up")) {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
 })

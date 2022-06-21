@@ -1,5 +1,5 @@
 /* FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Dancing+Script:wght@400;500;600;700&family=Marck+Script&family=Pacifico&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 * {
     margin: 0px;
@@ -8,7 +8,14 @@
 }
 
 :root {
-    --main-bg-color: #141414
+    --main-bg-color: #0d1117;
+    --main-fg-color: #c9d1d9;
+    --fg-color-quote: rgb(255, 226, 62);
+}
+
+::selection {
+    background-color: rgb(208, 250, 250);
+    color: rgb(55, 13, 88);
 }
 
 body {
@@ -119,12 +126,28 @@ body {
     opacity: 0;
 }
 
+.navbar_icon:hover {
+    /* animation: swing 1000ms ease-in-out 0ms 1; */
+    animation-name: swing;
+    animation-duration: 750ms;
+    animation-iteration-count: 1;
+    /* animation-timing-function: ease; */
+    /* animation-delay: 0ms; */
+    /* animation-fill-mode: forwards; */
+    /* animation-direction: normal; */
+
+}
+
 .navbar_icon:hover a .fa-youtube {
     color: rgb(243, 61, 61);
 }
 
+.navbar_icon:hover a .fa-github {
+    color: #6cc644;
+}
+
 .navbar_icon:hover a .fa-discord {
-    color: rgb(240, 14, 240);
+    color: rgb(202, 14, 240);
 }
 
 .navbar_icon:hover a .fa-dribbble {
@@ -142,7 +165,7 @@ body {
     padding-top: 2em;
     margin: 0 auto;
     max-width: 1600px;
-    padding: 140px 15em 270px;
+    padding: 140px 15em 370px;
     display: flex;
     align-content: center;
 
@@ -175,11 +198,6 @@ body {
     padding: 0;
     margin: 1.3em 0 0;
 }
-
-.part2 {
-    /* min-height: 500px; */
-}
-
 
 .section-part {
     flex: 1;
@@ -263,10 +281,78 @@ body {
     color: white;
     width: 80%;
     margin: auto;
-    margin-top: 5em;
+    /* margin-top: 5em; */
     height: 100vh;
     max-height: 600px
 }
+
+.quote-container {
+    border: 0.15rem solid var(--fg-color-quote);
+    width: 80%;
+    margin: auto;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 100%;
+    position: relative;
+    background-color: var(--main-bg-color);
+}
+
+.r1 {
+
+    top: -10px;
+    left: -10px;
+    transform: rotate(-45deg)
+}
+
+.r2 {
+    top: -10px;
+    right: -10px;
+    transform: rotate(45deg)
+}
+
+.r3 {
+    bottom: -10px;
+    right: -10px;
+    transform: rotate(135deg)
+}
+
+.r4 {
+    bottom: -10px;
+    left: -10px;
+    transform: rotate(-135deg)
+}
+
+.rounded-border {
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    background-color: var(--main-bg-color);
+    z-index: 50;
+    border-bottom: 0.1rem solid var(--fg-color-quote);
+    border-radius: 50%;
+}
+
+.title {
+    position: absolute;
+    top: -10px;
+    background-color: var(--main-bg-color);
+    left: 47%;
+    padding: 0 10px;
+    text-transform: uppercase;
+    color: var(--fg-color-quote);
+    font-family: 'Dancing Script', cursive;
+}
+
+.quote-content {
+    color: var(--main-fg-color);
+    font-size: 1.3rem;
+    font-family: 'Marck Script', cursive;
+}
+
+.quote {
+    padding: 1em;
+}
+
 
 .skills {
     display: flex;
@@ -311,8 +397,9 @@ body {
     font-size: 2.2em;
     margin: 0.5em 1em;
     display: block;
-    background: -webkit-gradient(linear, left top, right bottom, from(rgb(41, 247, 59)), to(rgb(76, 117, 252)));
+    background: -webkit-gradient(linear, left top, right bottom, from(rgb(247 209 41)), to(rgb(255 78 0)));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -347,7 +434,6 @@ body {
     max-height: 10rem;
     width: auto;
 }
-
 
 .prev,
 .next {
@@ -396,6 +482,8 @@ body {
     max-width: 75%;
     margin: auto;
     text-align: justify;
+    font-style: italic;
+    color: rgb(209, 209, 209);
 }
 
 .fade {
@@ -533,6 +621,24 @@ body {
 
 .d-n {
     opacity: 0;
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    33% {
+        transform: rotate(10deg);
+    }
+
+    66% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 /* Keyframes */
