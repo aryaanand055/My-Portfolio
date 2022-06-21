@@ -21,7 +21,6 @@
 body {
     background-color: var(--main-bg-color);
     font-family: 'Playfair Display', serif;
-    /* min-height: 3000px; */
 }
 
 .header {
@@ -56,7 +55,6 @@ body {
 .navbar_list_item {
     margin-left: 10px;
     color: #fff;
-    /* font-size: 1.4em; */
     box-sizing: border-box;
 }
 
@@ -127,15 +125,9 @@ body {
 }
 
 .navbar_icon:hover {
-    /* animation: swing 1000ms ease-in-out 0ms 1; */
     animation-name: swing;
     animation-duration: 750ms;
     animation-iteration-count: 1;
-    /* animation-timing-function: ease; */
-    /* animation-delay: 0ms; */
-    /* animation-fill-mode: forwards; */
-    /* animation-direction: normal; */
-
 }
 
 .navbar_icon:hover a .fa-youtube {
@@ -168,7 +160,6 @@ body {
     padding: 140px 15em 370px;
     display: flex;
     align-content: center;
-
     align-items: center;
     justify-content: center;
 }
@@ -281,7 +272,6 @@ body {
     color: white;
     width: 80%;
     margin: auto;
-    /* margin-top: 5em; */
     height: 100vh;
     max-height: 600px
 }
@@ -423,11 +413,6 @@ body {
     background-color: #1c1b1b;
     border-radius: 2em;
     padding: 1em;
-    /* position: relative; */
-    /* transform: translate(100%, 0%); */
-    /* opacity: 0; */
-    /* display: none; */
-
 }
 
 .testimonials-li img {
@@ -553,8 +538,6 @@ body {
     opacity: 1;
     transform: translate3d(0, 0px, 0);
     transform: scale(1.04);
-
-    /* transform: rotate(2deg); */
 }
 
 .footer-span-link::before {
