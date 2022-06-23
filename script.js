@@ -14,7 +14,7 @@ header.addEventListener("mouseout", () => {
 // Set Inteval for the testimonials shift
 setInterval(() => {
     plusSlides(1)
-}, 5000)
+}, 10000)
 
 let slideIndex = 1;
 showSlides(slideIndex);
